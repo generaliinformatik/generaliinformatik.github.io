@@ -1,5 +1,3 @@
-# generaliinformatik.github.io
-Generali Informatik
+# Open Source @ Generali / Generali Inforamtik
 
-Instructions:
-- http://kbroman.org/simple_site/pages/local_test.html
+This website currently serves as a placeholder for the upcoming description of our activities in the open source community. We ask for your patience.
