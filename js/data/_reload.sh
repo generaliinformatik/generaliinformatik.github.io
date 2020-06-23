@@ -60,7 +60,7 @@ get_repos() {
 
 (echo -n '$(function() { loadRepositoryData(' ; get_repos ; echo '); })') > load_repos.js
 
-# Members
+# Organization Members (note: only public ones)
 
 get_members() {
   get_all_pages 'https://api.github.com/orgs/generaliinformatik/members'

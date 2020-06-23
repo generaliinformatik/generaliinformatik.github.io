@@ -11,13 +11,13 @@ oss_projects['fah-red-lions'] = {
   position: 2,
   background: 'fah-red-lions.png'
 };
-oss_projects['github-webhooks-framework'] = {
+oss_projects['build-monitor-traffic-lights'] = {
   blog_post: '',
   featured: true,
   position: 3,
   background: 'blank.png'
 };
-oss_projects['build-monitor-traffic-lights'] = {
+oss_projects['github-webhooks-framework'] = {
   blog_post: '',
   featured: true,
   position: 4,
@@ -26,3 +26,4 @@ oss_projects['build-monitor-traffic-lights'] = {
 
 
 oss_projects['abc_kudo_cards'] = { deprecated: true }
+oss_projects['generaliinformatik.github.io'] = { deprecated: true }
