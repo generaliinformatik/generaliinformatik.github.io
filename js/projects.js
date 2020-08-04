@@ -17,7 +17,7 @@ oss_projects['build-monitor-traffic-lights'] = {
   position: 3,
   background: 'blank.png'
 };
-oss_projects['github-webhooks-framework'] = {
+oss_projects['genvoy'] = {
   blog_post: '',
   featured: true,
   position: 4,
