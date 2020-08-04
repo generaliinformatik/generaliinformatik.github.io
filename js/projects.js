@@ -21,7 +21,7 @@ oss_projects['genvoy'] = {
   blog_post: '',
   featured: true,
   position: 4,
-  background: 'blank.png'
+  background: 'genvoy.png'
 };
 
 
