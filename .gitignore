@@ -1,3 +1,7 @@
+### project specific excludes###
+GITHUB_TOKEN.txt
+GITHUB_BASE.txt
+
 ### Jekyll ###
 _site
 .sass-cache

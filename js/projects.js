@@ -5,11 +5,11 @@ oss_projects['hdfs-over-ftp'] = {
   position: 1,
   background: 'hdfs-over-ftp.png'
 };
-oss_projects['fah-red-lions'] = {
+oss_projects['scrumonline'] = {
   blog_post: '',
   featured: true,
   position: 2,
-  background: 'fah-red-lions.png'
+  background: 'scrumonline.png'
 };
 oss_projects['build-monitor-traffic-lights'] = {
   blog_post: '',
@@ -22,6 +22,12 @@ oss_projects['genvoy'] = {
   featured: true,
   position: 4,
   background: 'genvoy.png'
+};
+oss_projects['fah-red-lions'] = {
+  blog_post: '',
+  featured: false,
+  position: 5,
+  background: 'fah-red-lions.png'
 };
 
 
