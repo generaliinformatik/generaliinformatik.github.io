@@ -16,7 +16,8 @@ Modifications 2020 by @rfuehrer, Generali Deutschland AG
 
 - fork/clone repo
 - homebrew install jd (mac), other platforms: https://stedolan.github.io/jq/download/
-- save personal Github access token to file js/data/GITHUB_TOKEN.txt
+- generate personal access token (Profile -> Settings -> Developer settings -> Personal access tokens)
+- save this personal access token to file js/data/GITHUB_TOKEN.txt
 - save Github user or organization name to file js/data/GITHUB_BASE.txt
 - modify ./js/data/_reload.sh
 - run ./js/data/_reload.sh
