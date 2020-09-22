@@ -1,12 +1,12 @@
 # Copyright 2019, Yelp, Inc.
 # Copyright 2020, Generali Deutschland AG
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
 #     http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -14,6 +14,11 @@
 # limitations under the License.
 
 #!/bin/bash
+
+# NOTE: provide an access token to bypass API limits. Place just the
+# token without any other characters to file js/data/GITHUB_TOKEN.txt
+GITHUB_TOKEN=$(cat GITHUB_TOKEN.txt)
+GITHUB_BASE=$(cat GITHUB_BASE.txt)
 
 cd $(dirname $0)
 
@@ -27,9 +32,8 @@ get_all_pages() {
   while [ "$response" != "[]" ]
   do
     local url="$url_prefix?per_page=$page_size&page=$page"
-    echo "$url" >&2
 
-    response=$(curl -sf "$url" | jq . | tee -a "$outfile")
+    response=$(curl -H "Authorization: token $GITHUB_TOKEN" -sf "$url" | jq . | tee -a "$outfile")
 
     if [ $? -ne 0 ]
     then
@@ -45,6 +49,11 @@ get_all_pages() {
       exit 1
     fi
 
+    if [ "$response" != "[]" ]
+    then
+      echo "$url" >&2
+    fi
+
     let page=page+1
   done
 
@@ -52,10 +61,9 @@ get_all_pages() {
 }
 
 # Repos
-
 get_repos() {
   # modified by rfuehrer
-  get_all_pages 'https://api.github.com/users/generaliinformatik/repos'
+  get_all_pages "https://api.github.com/users/$GITHUB_BASE/repos"
 }
 
 (echo -n '$(function() { loadRepositoryData(' ; get_repos ; echo '); })') > load_repos.js
@@ -63,7 +71,7 @@ get_repos() {
 # Organization Members (note: only public ones)
 
 get_members() {
-  get_all_pages 'https://api.github.com/orgs/generaliinformatik/members'
+  get_all_pages "https://api.github.com/orgs/$GITHUB_BASE/members"
 }
 
 (echo -n '$(function() { loadMemberData(' ; get_members ; echo '); })') > load_members.js

@@ -12,10 +12,12 @@ This is licensed under the Apache License, Version 2.0: http://www.apache.org/li
 Original repository from Yelp (yelp.github.com/yelp.github.io)
 Modifications 2020 by @rfuehrer, Generali Deutschland AG 
 
-
 ## Installation
+
 - fork/clone repo
 - homebrew install jd (mac), other platforms: https://stedolan.github.io/jq/download/
+- save personal Github access token to file js/data/GITHUB_TOKEN.txt
+- save Github user or organization name to file GITHUB_BASE.txt
 - modify ./js/data/_reload.sh
 - run ./js/data/_reload.sh
 - configure website

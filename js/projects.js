@@ -23,6 +23,12 @@ oss_projects['genvoy'] = {
   position: 4,
   background: 'genvoy.png'
 };
+oss_projects['scrumonline'] = {
+  blog_post: '',
+  featured: true,
+  position: 5,
+  background: 'scrumonline.png'
+};
 
 
 oss_projects['abc_kudo_cards'] = { deprecated: true }
